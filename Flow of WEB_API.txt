@@ -1,0 +1,8 @@
+1. keep ready the connection string and the reference project
+2. projects are of two types: a premade one or your own project.
+3. Set an idea/theme. What are we building?
+4. List of things we want to store, have a rough idea about it.
+5. From the list of things, make a list of classes.
+6. For each class have a list of properties/fields.
+7. Make a list of controller names. (Usually each class will have a controller called one to one mapping)
+8. Start writing the CRUD function names for each controller. [Min. 5]

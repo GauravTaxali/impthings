@@ -1,0 +1,11 @@
+TO CONFIG GIT IN THE CMD
+git init
+git config --global user.name "NAME"
+git config --global user.bio/user.email "deails"
+git config --list --show-origin - To list all the configs.
+
+git add . - adds all the files in the pwd to the remote repo.
+git diff - to see changes made but not committed.
+git diff --staged - lists what changes will go into the next commit
+git rm - removes files from the remote or local repo.
+git mv - can be used to both move and rename files.

@@ -1,0 +1,38 @@
+►Agile - Agile is a methodology that delivers software or value incrementally from the start of the project instead of all the project at the end. It's iterative and time boxed.
+►It works by breaking the project down into little bits of user functionality called user stories, prioritizing them and then continuously delivering them in show 2 week cycles called sprints(iterations).
+►Analysis, design, coding and testing are continuous activities.
+
+AGILE Principles:
+►customer satisfaction by early and continuous delivery of useful software
+►welcome changing reqs even if late in development
+►working software is delivered frequently
+►close, daily cooperation between business people and developer.
+►face to face communication is the best form of communication
+►working software is principle measure of success
+►continuous attention to technical excellence and good design
+►only build what is really essential
+►self organizing teams
+►regular adaptation to changing circumstance.
+
+Key points:
+►Velocity: The number of story points delivered over a sprint
+►Swimlanes: representation of stories and the status To do, doing, done on (X-Axis)
+►Minimum Viable Product(MVP): The minimum product that meets the client's expectations.
+►Release: Comprised of several iterations or sprints.
+►Sprint: Period of time in which team will work on defined set of user stories.
+
+The Agile Team:
+►Product Owner: Represents the or is the end customer.
+►Scrum Master: Facilitates team meetings.
+►Delivery Team: People in charge of execution or part of project's implementation.
+
+Tools:
+►Burn Down Chart: shows remaining work to be done, progress over time and team's velocity.
+►Kanban/Agile board: Visual / pull system to track work and progress in a logical / basic flow
+
+Rituals:
+►Sprint Planning: Meeting where team defines which user stories they will work on in an upcoming sprint.
+►Daily standups: Team shares what they did yesterday, what they are doing today.
+►Sprint Review: Meeting where team presents what they had delivered over a sprint to the project owner.
+►Retrospectives: Meetings done after sprints to review, revise and adjust.
+
