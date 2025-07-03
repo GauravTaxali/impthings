@@ -1,0 +1,23 @@
+File Allocation Table (FAT) 32 - bit released with Windows 95. Due to its lightweight design and high compatibility with multiple Operating Systems, it has stayed relevant. FAT32 has a file size limit of 4GB and a volume limit of 2TB. Examples are embedded systems, IoT devices, USB storage devices, camera memory storage, legacy devices, and more. The size of a sector is 512 bytes.
+
+Attackers often use USBs formatted with FAT32 due to its high compatibility with different OSs and lack of permissions. Unlike NTFS, FAT32 does not include functionality for folder and file permissions. This means anybody can access a file or folder on a FAT32 partition. This offers attackers some flexibility to abuse FAT32.
+
+Stuxnet: An infamous attack that used some of the above techniques is Stuxnet, a worm that was used in an unprecedented attack against Iran’s nuclear program. The initial access vector was a USB containing the Stuxnet worm as mentioned in the official report of the NATO Cooperative Cyber Defense Center of Excellence. A USB was used because the targeted systems were air-gapped (No connection to the internet or other networks). The main reason that FAT32 would have been used is its compatibility with a broad range of different OSs and their versions. The attacker had to ensure that when the USB was inserted into a targeted system, it could read and automatically execute the USB’s content. Additionally, due to the lack of permissions on the FAT32 filesystem, the USB content did not have to be executed by an administrator account.
+
+FAT32 Structure:
+A FAT32 partitioned volume typically consists of the following parts:
+
+Reserved Area:- The reserved area contains the important filesystem structures required for the volume to function. The reserved sector always starts from sector 0 on the partition and includes:
+	Boot sector: Sector 0-1.
+	FSinfo sector: Sector 1-2.
+	**Sectors 2 to 5 are reserved sectors.
+	Backup boot sector: starts at sector 6.
+	Additional reserved sectors: start from sector 7 and stretch until the start of the FAT area. We need to analyze the boot sector to determine the complete size of the Reserved Area.
+FAT Area
+	File Allocation Table (FAT1)
+	Backup File Allocation Table (FAT2)
+Data Area
+	Root Directory
+	Data Region
+
+Boot Sector: 
