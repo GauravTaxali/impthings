@@ -20,4 +20,18 @@ Data Area
 	Root Directory
 	Data Region
 
-Boot Sector: 
+Boot Sector: first sector (sector 0) on a FAT32 partitioned volume. It contains the metadata of the partition. This information is essential for the OS to know how to access the partition, where to look for the File Allocation Table, where the Root Directory is located, and where the Data Region begins. Let’s have a look at the available metadata. The highlighted fields are interesting when doing boot sector analysis.
+proper byte structure from the fat32 thm room.
+
+FAT Area: The FAT area contains the File Allocation Table (FAT1) and its backup (FAT2) and has the following functions:
+
+It contains information about the allocation of clusters to a file or directory and the next free clusters.
+It helps with the fragmentation (data stored in non-contiguous clusters) of files. It keeps track of all the clusters that are assigned to a file.
+It does integrity checking to identify bad clusters and mark them not to be used for storing data. Each entry in the FAT is 32 bits, but only 28 bits are effectively used. It is this 32-bit value that is referenced in the filesystem name FAT 32.
+
+Used Cluster
+A cluster chain consists of one or more clusters. Each entry in the data area has exactly one cluster chain assigned. The Used cluster field indicates the index number of the next cluster that is part of the chain. 
+
+End of File
+The End of File field is to indicate that the cluster at that index is the last cluster of the chain. Note: The values  0F FF FF FF  and  FF FF FF FF  are both used for marking the end of a cluster chain. The difference lies in the first 4 bits that are reserved. Some tools process these bits, others do not. The FF FF FF FF  representation is a simplified representation that does not take those 4 bits into account. Generally, it is recommended by standards to use the 0F FF FF FF  value.
+
